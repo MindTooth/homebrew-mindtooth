@@ -8,7 +8,14 @@ class Wolfictl < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = %W[
+      -s -w
+      -X sigs.k8s.io/release-utils/version.gitVersion=#{version}
+      -X sigs.k8s.io/release-utils/version.gitCommit=#{tap.user}
+      -X sigs.k8s.io/release-utils/version.gitTreeState=#{tap.user}
+      -X sigs.k8s.io/release-utils/version.buildDate=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"wolfictl", "completion")
   end
