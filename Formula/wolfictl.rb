@@ -1,8 +1,8 @@
 class Wolfictl < Formula
   desc "CLI used to work with the Wolfi OSS project"
   homepage "https://github.com/wolfi-dev/wolfictl"
-  url "https://github.com/wolfi-dev/wolfictl/archive/refs/tags/v0.16.13.tar.gz"
-  sha256 "263e741fb9f2bc9e12b0f8b70645efa84a54e81f3422a8e6aa90e6ad643f01d2"
+  url "https://github.com/wolfi-dev/wolfictl/archive/refs/tags/v0.16.14.tar.gz"
+  sha256 "0c590e735a2f973c807f1c03e28320757c03e50cf0b8398e948b490de6102bad"
   head "https://github.com/wolfi-dev/wolfictl.git", branch: "main"
 
   depends_on "go" => :build
