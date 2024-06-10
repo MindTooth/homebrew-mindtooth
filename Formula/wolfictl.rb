@@ -3,6 +3,7 @@ class Wolfictl < Formula
   homepage "https://github.com/wolfi-dev/wolfictl"
   url "https://github.com/wolfi-dev/wolfictl/archive/refs/tags/v0.17.0.tar.gz"
   sha256 "ffc3ae9721d14918dde94da040d35bf473a99045ea854456894de80b18d6d721"
+  license "Apache-2.0"
   head "https://github.com/wolfi-dev/wolfictl.git", branch: "main"
 
   depends_on "go" => :build
