@@ -7,10 +7,7 @@ class Sshpass < Formula
   head "https://git.code.sf.net/p/sshpass/code-git sshpass-code-git", branch: "main"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
