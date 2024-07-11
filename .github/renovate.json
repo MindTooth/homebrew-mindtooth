@@ -8,5 +8,16 @@
     ":automergeMinor"
   ],
 
-  "enabledManagers": ["homebrew"]
+  "enabledManagers": ["homebrew"],
+
+  "packageRules": [
+    {
+      "matchManagers": ["homebrew"],
+      "automerge": true,
+      "extends": [
+        ":semanticCommitType(fix)",
+        "schedule:automergeNonOfficeHours"
+      ]
+    }
+  ]
 }
